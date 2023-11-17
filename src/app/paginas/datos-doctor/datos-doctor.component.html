@@ -1,1 +1,126 @@
-<p>datos-doctor works!</p>
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">            
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex animated fadeIn">
+                            <div class="mr-auto">
+                                <div class="form-group">                                  
+                                    <h3 class="text-themecolor">Datos del Doctor</h3> </div>
+                            </div>                            
+                        </div>
+                        
+                        <div class="table-responsive animated fadeInDown">
+                            <table class="table full-color-table full-primary-table hover-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Teléfono</th>
+                                        <th>Cedula</th>
+                                        <th>Especialidad</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr >
+                                        <td>iddoctor</td>
+                                        <td>nomdoctor</td>
+                                        <td>teldoctor</td>
+                                        <td>cedoctor</td>
+                                        <td>espedoctor</td>
+                                        <td> 
+                                            <a  class="btn btn-warning" data-toggle="modal" data-target=".example2-modal-lg"><i class="fa fa-edit"></i></a>
+                                        </td>                                        
+                                    </tr>                                        
+                                </tbody>
+                            </table>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+    <div class="card-body">
+        <!-- sample modal content -->
+        <div class="modal fade example2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myLargeModalLabel">Modificar datos del doctor</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="card">
+                        <form>
+                        <div class="card-body">
+                                <div class="form-body">
+                                    <div class="row p-t-20">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre completo</label>
+                                                <input type="text"  class="form-control"  placeholder="Pedro Pablo" >
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/row-->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Teléfono</label>
+                                                <input type="text"   class="form-control"   placeholder="(999) 999-9999">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Cedula Profesional</label>
+                                                <input type="text"  class="form-control"   placeholder="Profesional">
+                                            </div>
+                                        </div>
+                                    
+                                        
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Especialidad</label>
+                                                <input type="text"  class="form-control" placeholder="Especialidad">
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    <!--/row-->                                        
+                                </div>
+                                <div class="form-actions">
+                                    <button class="btn btn-success"> <i class="fa fa-check" ></i> Guardar </button> 
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->                                
+    </div>
+</div>
+</div>
+</div>
