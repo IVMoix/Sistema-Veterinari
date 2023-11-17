@@ -54,10 +54,10 @@ export class PacientesService {
   constructor(private http: HttpClient ) {}
   
   metodoPost(url: any, body: any ):Observable<any> {
-    return this.http.post(`$(this.url)$(url)`, (body));
+    return this.http.post(`${this.url}${url}`, body);
   }
   metodoGet(url: any):Observable<any> {
-    return this.http.get(`$(this.url)$(url)`);
+    return this.http.get(`${this.url}${url}`);
   }
 
 }
