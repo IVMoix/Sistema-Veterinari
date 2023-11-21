@@ -21,15 +21,15 @@ export class PacientesService {
         }
       ]
     },
-      {
-        titulo: 'Clientes',
-        icono: 'mdi mdi-gauge',
-        submenu: [
-          {titulo: 'Alta de cliente', url: '/dashboard/crearCliente'},
-          {titulo: 'Lista de clientes', url: '/dashboard/listaClientes'},
-          {titulo: 'Datos del cliente', url: '/dashboard/datosCliente'}
-        ]
-      },
+      // {
+      //   titulo: 'Clientes',
+      //   icono: 'mdi mdi-gauge',
+      //   submenu: [
+      //     {titulo: 'Alta de cliente', url: '/dashboard/crearCliente'},
+      //     {titulo: 'Lista de clientes', url: '/dashboard/listaClientes'},
+      //     {titulo: 'Datos del cliente', url: '/dashboard/datosCliente'}
+      //   ]
+      // },
     {
       titulo: 'Pacientes',
       icono: 'mdi mdi-paw',
@@ -60,4 +60,11 @@ export class PacientesService {
     return this.http.get(`${this.url}${url}`);
   }
 
+  seleccionarPaciente(idpaciente: number){
+    return this.http.get(`${this.url}SeleccionarPaciente.php?idpaciente=${idpaciente}`)
+  }
+
+  eliminarPaciente(idpaciente: any){
+    return this.http.get(`$${this.url}EliminarPaciente.php?idpaciente=${idpaciente}`)
+  }
 }

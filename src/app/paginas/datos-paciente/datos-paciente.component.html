@@ -36,17 +36,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr >
-                                        <td>idpaciente</td>
-                                        <td>nompaciente</td>
-                                        <td>edadpaciente</td>
-                                        <td>telpaciente</td>
-                                        <td>dirpaciente</td>
+                                    <tr *ngFor="let datos of pacientes">
+                                        <td>{{datos.idpaciente}}</td>
+                                        <td>{{datos.nompaciente}}</td>
+                                        <td>{{datos.edadpaciente}}</td>
+                                        <td>{{datos.telpaciente}}</td>
+                                        <td>{{datos.dirpaciente}}</td>
                                         <td> 
-                                            <a  class="btn btn-warning" data-toggle="modal" data-target=".example2-modal-lg"><i class="fa fa-edit"></i></a>
+                                            <a (click)="seleccionarPaciente(datos.idpaciente);" class="btn btn-warning" data-toggle="modal" data-target=".example2-modal-lg"><i class="fa fa-edit"></i></a>
                                         </td>
                                         <td> 
-                                            <a class="btn btn-success"><i class="fa fa-trash"></i></a>
+                                            <a class="btn btn-success" (click)="eliminarPaciente(datos.idpaciente);"><i class="fa fa-trash"></i></a>
                                         </td>
                                         
                                     </tr>                                        
@@ -86,14 +86,14 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Nombre completo</label>
-                                                <input type="text"  class="form-control"  placeholder="Brenda Torres" >
+                                                <input type="text"  class="form-control" name="nompaciente" [(ngModel)]="paciente.nompaciente" placeholder="Brenda Torres" >
                                             </div>
                                         </div>
                                         <!--/span-->
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Edad</label>
-                                                <input type="text"  class="form-control"   placeholder="31 años">
+                                                <input type="text"  class="form-control" name="edadpaciente" [(ngModel)]="paciente.edadpaciente"  placeholder="31 años">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -103,14 +103,14 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Teléfono</label>
-                                                <input type="text"   class="form-control"   placeholder="(999) 999-9999">
+                                                <input type="text"   class="form-control" name="telpaciente" [(ngModel)]="paciente.telpaciente"  placeholder="(999) 999-9999">
                                             </div>
                                         </div>
                                         <!--/span-->
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Dirección</label>
-                                                <input type="text"  class="form-control"   placeholder="Av. Venustiano carranza 43, Atlacomulco, Edo. De Méx.">
+                                                <input type="text"  class="form-control" name="dirpaciente" [(ngModel)]="paciente.dirpaciente"  placeholder="Av. Venustiano carranza 43, Atlacomulco, Edo. De Méx.">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -118,7 +118,7 @@
                                     <!--/row-->                                        
                                 </div>
                                 <div class="form-actions">
-                                    <button class="btn btn-success"> <i class="fa fa-check" ></i> Guardar </button> 
+                                    <button  class="btn btn-success" (click)="editarPaciente();"> <i class="fa fa-check" ></i> Guardar </button> 
                                 </div>
                         </div>
                         </form>
