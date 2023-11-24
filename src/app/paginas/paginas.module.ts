@@ -12,6 +12,7 @@ import { DatosPacienteComponent } from './datos-paciente/datos-paciente.componen
 import { ExpedienteComponent } from './expediente/expediente.component';
 import { HistorialPacienteComponent } from './historial-paciente/historial-paciente.component';
 import { NuevoHistorialComponent } from './nuevo-historial/nuevo-historial.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 
 
@@ -30,7 +31,8 @@ import { NuevoHistorialComponent } from './nuevo-historial/nuevo-historial.compo
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ImageCropperModule
   ]
 })
 export class PaginasModule { }
