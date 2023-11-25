@@ -67,4 +67,8 @@ export class PacientesService {
   eliminarPaciente(idpaciente: any){
     return this.http.get(`$${this.url}EliminarPaciente.php?idpaciente=${idpaciente}`)
   }
+
+  obtenerHistoriales(){
+    return this.http.get(`$${this.url}ObtenerHistoriales.php`)
+  }
 }

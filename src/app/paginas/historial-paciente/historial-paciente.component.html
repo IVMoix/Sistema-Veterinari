@@ -30,10 +30,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td>nompaciente</td>                                                                                        
+                    <tr *ngFor="let historiales of nuevosHistoriales">
+                        <td>{{historiales.nompaciente}}</td>                                                                                        
                         <td> 
-                            <a class="btn btn-success" ><i class="fa fa-eye"></i></a>
+                            <a (click)="verExpediente(historiales.idpaciente)" class="btn btn-success" ><i class="fa fa-eye"></i></a>
                         </td>
                     </tr>                                        
                 </tbody>
