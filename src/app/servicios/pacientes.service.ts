@@ -71,4 +71,15 @@ export class PacientesService {
   obtenerHistoriales(){
     return this.http.get(`$${this.url}ObtenerHistoriales.php`)
   }
+
+  ObtenerExpediente(idpaciente: number){
+    return this.http.get(`${this.url}ObtenerExpedientes.php?idpaciente=${idpaciente}`)
+  }
+
+  seleccionarExpediente(idhistorial: number){
+    return this.http.get(`${this.url}SeleccionarExpediente.php?idhistorial=${idhistorial}`)
+  }
+  seleccionarReceta(idhistorial: any){
+    return this.http.get(`${this.url}SeleccionarReceta.php?idhistorial=${idhistorial}`)
+  }
 }
