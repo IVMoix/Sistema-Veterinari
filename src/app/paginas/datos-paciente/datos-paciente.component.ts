@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class DatosPacienteComponent implements OnInit {
   pacientes: any = [];
   paciente: any = {};
+  filtrarNombre: any = ''; 
 
   constructor(private pacientesService: PacientesService, public router: Router) {}
 

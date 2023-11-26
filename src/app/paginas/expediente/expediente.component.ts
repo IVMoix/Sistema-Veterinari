@@ -83,7 +83,7 @@ export class ExpedienteComponent  implements OnInit{
   }
 
   obtenerExpediente(){
-    this.pacientesService.ObtenerExpediente(this.expedientes).subscribe((resp: any) => {
+    this.pacientesService.obtenerExpediente(this.expedientes).subscribe((resp: any) => {
       this.exp = resp;
       console.log(this.exp);
     })

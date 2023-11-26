@@ -11,7 +11,7 @@
                 <h3 class="text-themecolor">Historial de registros clínicos </h3>
             </div>
             <div class="col-md-4 align-self-center">
-                <input id="demo-input-search2" type="text" placeholder="Buscar por nombre" autocomplete="off">
+                <input id="demo-input-search2" type="text" placeholder="Buscar por nombre" name="filtrarNombre" [(ngModel)]="filtrarNombre" autocomplete="off">
             </div>
         </div>
         <!-- ============================================================== -->
@@ -30,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let historiales of nuevosHistoriales">
+                    <tr *ngFor="let historiales of nuevosHistoriales | filtrarTabla: filtrarNombre">
                         <td>{{historiales.nompaciente}}</td>                                                                                        
                         <td> 
                             <a (click)="verExpediente(historiales.idpaciente)" class="btn btn-success" ><i class="fa fa-eye"></i></a>

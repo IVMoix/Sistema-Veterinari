@@ -69,10 +69,10 @@ export class PacientesService {
   }
 
   obtenerHistoriales(){
-    return this.http.get(`$${this.url}ObtenerHistoriales.php`)
+    return this.http.get(`${this.url}ObtenerHistoriales.php`)
   }
 
-  ObtenerExpediente(idpaciente: number){
+  obtenerExpediente(idpaciente: number){
     return this.http.get(`${this.url}ObtenerExpedientes.php?idpaciente=${idpaciente}`)
   }
 

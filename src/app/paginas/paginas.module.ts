@@ -13,6 +13,7 @@ import { ExpedienteComponent } from './expediente/expediente.component';
 import { HistorialPacienteComponent } from './historial-paciente/historial-paciente.component';
 import { NuevoHistorialComponent } from './nuevo-historial/nuevo-historial.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { FiltrarTablaPipe } from '../pipes/filtrar-tabla.pipe'; 
 
 
 
@@ -26,7 +27,8 @@ import { ImageCropperModule } from 'ngx-image-cropper';
     DatosPacienteComponent,
     ExpedienteComponent,
     HistorialPacienteComponent,
-    NuevoHistorialComponent
+    NuevoHistorialComponent,
+    FiltrarTablaPipe
   ],
   imports: [
     CommonModule,
