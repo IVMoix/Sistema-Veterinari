@@ -11,6 +11,7 @@ export class HistorialPacienteComponent implements OnInit {
 
   nuevosHistoriales: any[] = [] ;
   filtrarNombre: any = ''; 
+  p: number = 1;
 
 
   constructor(public pacientesService: PacientesService, private router: Router) { }
