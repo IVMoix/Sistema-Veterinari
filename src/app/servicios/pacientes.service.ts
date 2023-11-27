@@ -61,25 +61,37 @@ export class PacientesService {
   }
 
   seleccionarPaciente(idpaciente: number){
-    return this.http.get(`${this.url}SeleccionarPaciente.php?idpaciente=${idpaciente}`)
+    return this.http.get(`${this.url}SeleccionarPaciente.php?idpaciente=${idpaciente}`);
+  }
+
+  seleccionarDoctor(iddoctor: number){
+    return this.http.get(`${this.url}SeleccionarDoctor.php?iddoctor=${iddoctor}`);
+  }
+
+  obtenerDoctores(){
+    return this.http.get(`${this.url}ObtenerDoctores.php`);
   }
 
   eliminarPaciente(idpaciente: any){
-    return this.http.get(`$${this.url}EliminarPaciente.php?idpaciente=${idpaciente}`)
+    return this.http.get(`${this.url}EliminarPaciente.php?idpaciente=${idpaciente}`);
   }
 
   obtenerHistoriales(){
-    return this.http.get(`${this.url}ObtenerHistoriales.php`)
+    return this.http.get(`${this.url}ObtenerHistoriales.php`);
   }
 
   obtenerExpediente(idpaciente: number){
-    return this.http.get(`${this.url}ObtenerExpedientes.php?idpaciente=${idpaciente}`)
+    return this.http.get(`${this.url}ObtenerExpedientes.php?idpaciente=${idpaciente}`);
   }
 
   seleccionarExpediente(idhistorial: number){
-    return this.http.get(`${this.url}SeleccionarExpediente.php?idhistorial=${idhistorial}`)
+    return this.http.get(`${this.url}SeleccionarExpediente.php?idhistorial=${idhistorial}`);
   }
   seleccionarReceta(idhistorial: any){
-    return this.http.get(`${this.url}SeleccionarReceta.php?idhistorial=${idhistorial}`)
+    return this.http.get(`${this.url}SeleccionarReceta.php?idhistorial=${idhistorial}`);
+  }
+
+  editarDoctor(iddoctor: any) {
+    return this.http.post(`${this.url}EditarDoctor.php?`, JSON.stringify(iddoctor));
   }
 }
