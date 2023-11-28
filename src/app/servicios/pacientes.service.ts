@@ -94,4 +94,8 @@ export class PacientesService {
   editarDoctor(iddoctor: any) {
     return this.http.post(`${this.url}EditarDoctor.php?`, JSON.stringify(iddoctor));
   }
+  
+  logout(){
+    localStorage.removeItem('token');
+  }
 }

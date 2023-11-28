@@ -14,6 +14,7 @@ export class PaginasComponent {
   }
 
   logout() {
+    this.pacientesService.logout();
     this.router.navigateByUrl('/login');
   }
 }

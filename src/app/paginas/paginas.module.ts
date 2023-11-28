@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PaginasComponent } from './paginas.component';
 import { LoginComponent } from './login/login.component';
@@ -30,13 +30,16 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HistorialPacienteComponent,
     NuevoHistorialComponent,
     FiltrarTablaPipe
+    
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ImageCropperModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ]
 })
 export class PaginasModule { }
