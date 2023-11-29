@@ -5,9 +5,12 @@ import { PaginasRoutingModule } from './paginas/paginas.routing';
 import { HomeComponent } from './paginas/home/home.component';
 
 const routes: Routes = [
-  {path:'login', component: LoginComponent},
-  {path:'home', component: HomeComponent},
-  {path:'**', redirectTo:'/home', pathMatch:'full' }
+  {path:'moix/login', component: LoginComponent},
+  {path:'moix/home', component: HomeComponent},
+  {path:'moix', redirectTo:'moix/home', pathMatch:'full' }
+  // {path:'login', component: LoginComponent},
+  // {path:'home', component: HomeComponent},
+  // {path:'**', redirectTo:'home', pathMatch:'full' }
 ];
 
 @NgModule({

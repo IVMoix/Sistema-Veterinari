@@ -13,12 +13,18 @@ const routes: Routes = [
     {path:'dashboard', component: PaginasComponent,
                 canActivate: [authGuard],
                 children:[
-                    {path: 'crearPaciente', component: CrearPacienteComponent},
-                    {path: 'datosDoctor', component: DatosDoctorComponent},
-                    {path: 'datosPaciente', component: DatosPacienteComponent},
-                    {path: 'expediente/:id', component: ExpedienteComponent},
-                    {path: 'historialPaciente', component: HistorialPacienteComponent},
-                    {path: 'nuevoHistorial', component: NuevoHistorialComponent},
+                    {path: 'moix/crearPaciente', component: CrearPacienteComponent},
+                    {path: 'moix/datosDoctor', component: DatosDoctorComponent},
+                    {path: 'moix/datosPaciente', component: DatosPacienteComponent},
+                    {path: 'moix/expediente/:id', component: ExpedienteComponent},
+                    {path: 'moix/historialPaciente', component: HistorialPacienteComponent},
+                    {path: 'moix/nuevoHistorial', component: NuevoHistorialComponent},
+                    // {path: 'crearPaciente', component: CrearPacienteComponent},
+                    // {path: 'datosDoctor', component: DatosDoctorComponent},
+                    // {path: 'datosPaciente', component: DatosPacienteComponent},
+                    // {path: 'expediente/:id', component: ExpedienteComponent},
+                    // {path: 'historialPaciente', component: HistorialPacienteComponent},
+                    // {path: 'nuevoHistorial', component: NuevoHistorialComponent},
                 ]}
  
 ];
