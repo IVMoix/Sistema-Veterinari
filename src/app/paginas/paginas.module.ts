@@ -15,6 +15,7 @@ import { NuevoHistorialComponent } from './nuevo-historial/nuevo-historial.compo
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { FiltrarTablaPipe } from '../pipes/filtrar-tabla.pipe'; 
 import {NgxPaginationModule} from 'ngx-pagination';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -29,7 +30,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ExpedienteComponent,
     HistorialPacienteComponent,
     NuevoHistorialComponent,
-    FiltrarTablaPipe
+    FiltrarTablaPipe,
+    HomeComponent
     
   ],
   imports: [
